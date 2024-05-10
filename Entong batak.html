@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For you</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hai Cantik</h1>
+    <img src="gif 1.gif" alt="GIF 1" width="100px" height="100px">
+    <h1>Maukah menjadi pacarku??</h1>
+    <button id="btn_mau" onclick="alert('I LOVE YOU')">Mau</button>
+    <button id="btn_gamau" onclick="gamau()">Ga Mau</button>
+
+    <script>
+        function gamau() {
+            var button = document.getElementById('btn_gamau');
+            var maxX = window.innerWidth - button.offsetWidth;
+            var maxY = window.innerHeight - button.offsetHeight;
+            var newX = Math.floor(Math.random() * maxX);
+            var newY = Math.floor(Math.random() * maxY);
+            button.style.position = 'absolute';
+            button.style.left = newX + 'px';
+            button.style.top = newY + 'px';
+        }
+    </script>
+</body>
+</html>
